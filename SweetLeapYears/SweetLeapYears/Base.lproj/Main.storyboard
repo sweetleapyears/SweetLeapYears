@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="SweetLeapYears" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QTc-rk-djq">
+                                <rect key="frame" x="16" y="132" width="288" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="566051618.679335">
+                                    <!--2018-12-09 12:33:38 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMJ-t6-yM0">
+                                <rect key="frame" x="135.5" y="380" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="didTapSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOM-nI-Q9n"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome in SweetLeapYears !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-R2-GVQ">
+                                <rect key="frame" x="16" y="48" width="288" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saB-3v-dfM">
+                                <rect key="frame" x="91" y="418" width="138" height="30"/>
+                                <state key="normal" title="What's a leap year ?"/>
+                                <connections>
+                                    <action selector="didTapMoreInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TpX-O5-dQg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a date and discover if it's in a leap year." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKq-LV-UNw">
+                                <rect key="frame" x="16" y="80" width="288" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QTc-rk-djq" firstAttribute="top" secondItem="rKq-LV-UNw" secondAttribute="bottom" constant="16" id="0Hs-ox-1DP"/>
+                            <constraint firstItem="rKq-LV-UNw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="A2k-3o-5Uf"/>
+                            <constraint firstItem="rKq-LV-UNw" firstAttribute="top" secondItem="WFb-R2-GVQ" secondAttribute="bottom" constant="8" id="EYU-mB-jdm"/>
+                            <constraint firstItem="saB-3v-dfM" firstAttribute="top" secondItem="UMJ-t6-yM0" secondAttribute="bottom" constant="8" id="K15-FT-jwR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WFb-R2-GVQ" secondAttribute="trailing" constant="16" id="Ts8-SQ-KTv"/>
+                            <constraint firstItem="WFb-R2-GVQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Uaa-bb-kn0"/>
+                            <constraint firstItem="QTc-rk-djq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wqh-63-8vj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rKq-LV-UNw" secondAttribute="trailing" constant="16" id="XP6-co-Amb"/>
+                            <constraint firstItem="UMJ-t6-yM0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZrQ-7W-RwX"/>
+                            <constraint firstItem="saB-3v-dfM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e1O-c4-Q9y"/>
+                            <constraint firstItem="UMJ-t6-yM0" firstAttribute="top" secondItem="QTc-rk-djq" secondAttribute="bottom" constant="32" id="pF9-o4-xoD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QTc-rk-djq" secondAttribute="trailing" constant="16" id="vh5-wH-K5H"/>
+                            <constraint firstItem="rKq-LV-UNw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wE2-Og-CEC"/>
+                            <constraint firstItem="QTc-rk-djq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xGr-iV-01O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="QTc-rk-djq" id="JlZ-aT-4az"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="52.5" y="72.5"/>
         </scene>
     </scenes>
 </document>

@@ -12,23 +12,53 @@ import XCTest
 class SweetLeapYearsTests: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        super.setUp()
+        self.continueAfterFailure = false
+        
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testLeapYearAnalyzer() {
+        
+        let leapYears: [Int] = [2000, 2008, 2012, 2016]
+        let notLeapYears: [Int] = [2017, 2018, 2019, 1700, 1800, 1900, 2100, -1, Int.min, Int.max]
+        
+        let datesInLeapYears: [Date] = leapYears.map { Date(year: $0) }
+        let datesInNotLeapYears : [Date] = notLeapYears.map { Date(year: $0) }
+        
+        for date in datesInLeapYears {
+            print("Analyzing \(date)")
+            let isLeapYear = date.isInLeapYear()
+            XCTAssertTrue(isLeapYear)
         }
+        
+        for date in datesInNotLeapYears {
+            print("Analyzing \(date)")
+            let isLeapYear = date.isInLeapYear()
+            XCTAssertFalse(isLeapYear)
+        }
+        
     }
+    
+}
 
+//MARK: - Date object creation
+
+private extension Date {
+    
+    /// Initializes a new Date object at January 1st of the provided year.
+    init(year: Int) {
+        
+        var dateComponents = DateComponents()
+        dateComponents.year = year
+        dateComponents.month = 1
+        dateComponents.day = 1
+        self = Calendar.current.date(from: dateComponents)!
+        
+    }
+        
 }

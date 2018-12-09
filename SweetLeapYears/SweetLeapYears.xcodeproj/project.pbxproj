@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		522C58A321BD2E0700CEEA89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C58A221BD2E0700CEEA89 /* AppDelegate.swift */; };
-		522C58A521BD2E0700CEEA89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C58A421BD2E0700CEEA89 /* ViewController.swift */; };
 		522C58A821BD2E0700CEEA89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522C58A621BD2E0700CEEA89 /* Main.storyboard */; };
 		522C58AA21BD2E0900CEEA89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522C58A921BD2E0900CEEA89 /* Assets.xcassets */; };
 		522C58AD21BD2E0900CEEA89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522C58AB21BD2E0900CEEA89 /* LaunchScreen.storyboard */; };
 		522C58B821BD2E0900CEEA89 /* SweetLeapYearsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C58B721BD2E0900CEEA89 /* SweetLeapYearsTests.swift */; };
+		522C58CA21BD324800CEEA89 /* Leap_years_description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 522C58C921BD324700CEEA89 /* Leap_years_description.txt */; };
+		522C58CE21BD338F00CEEA89 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C58CD21BD338F00CEEA89 /* MainViewController.swift */; };
+		522C58D021BD33BE00CEEA89 /* LeapYearAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C58CF21BD33BE00CEEA89 /* LeapYearAnalyzer.swift */; };
+		522C58D321BD355D00CEEA89 /* Date+LeapYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C58D221BD355D00CEEA89 /* Date+LeapYear.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,6 @@
 /* Begin PBXFileReference section */
 		522C589F21BD2E0700CEEA89 /* SweetLeapYears.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweetLeapYears.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522C58A221BD2E0700CEEA89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		522C58A421BD2E0700CEEA89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		522C58A721BD2E0700CEEA89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		522C58A921BD2E0900CEEA89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		522C58AC21BD2E0900CEEA89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,10 @@
 		522C58B321BD2E0900CEEA89 /* SweetLeapYearsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetLeapYearsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		522C58B721BD2E0900CEEA89 /* SweetLeapYearsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetLeapYearsTests.swift; sourceTree = "<group>"; };
 		522C58B921BD2E0900CEEA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		522C58C921BD324700CEEA89 /* Leap_years_description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Leap_years_description.txt; sourceTree = "<group>"; };
+		522C58CD21BD338F00CEEA89 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		522C58CF21BD33BE00CEEA89 /* LeapYearAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeapYearAnalyzer.swift; sourceTree = "<group>"; };
+		522C58D221BD355D00CEEA89 /* Date+LeapYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+LeapYear.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,15 @@
 		522C58A121BD2E0700CEEA89 /* SweetLeapYears */ = {
 			isa = PBXGroup;
 			children = (
+				522C58D121BD354700CEEA89 /* Extensions */,
+				522C58CB21BD337800CEEA89 /* Analyzers */,
+				522C58CC21BD338F00CEEA89 /* ViewControllers */,
 				522C58A221BD2E0700CEEA89 /* AppDelegate.swift */,
-				522C58A421BD2E0700CEEA89 /* ViewController.swift */,
 				522C58A621BD2E0700CEEA89 /* Main.storyboard */,
-				522C58A921BD2E0900CEEA89 /* Assets.xcassets */,
 				522C58AB21BD2E0900CEEA89 /* LaunchScreen.storyboard */,
 				522C58AE21BD2E0900CEEA89 /* Info.plist */,
+				522C58A921BD2E0900CEEA89 /* Assets.xcassets */,
+				522C58C621BD2F3600CEEA89 /* Resources */,
 			);
 			path = SweetLeapYears;
 			sourceTree = "<group>";
@@ -94,6 +103,38 @@
 				522C58B921BD2E0900CEEA89 /* Info.plist */,
 			);
 			path = SweetLeapYearsTests;
+			sourceTree = "<group>";
+		};
+		522C58C621BD2F3600CEEA89 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				522C58C921BD324700CEEA89 /* Leap_years_description.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		522C58CB21BD337800CEEA89 /* Analyzers */ = {
+			isa = PBXGroup;
+			children = (
+				522C58CF21BD33BE00CEEA89 /* LeapYearAnalyzer.swift */,
+			);
+			path = Analyzers;
+			sourceTree = "<group>";
+		};
+		522C58CC21BD338F00CEEA89 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				522C58CD21BD338F00CEEA89 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		522C58D121BD354700CEEA89 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				522C58D221BD355D00CEEA89 /* Date+LeapYear.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +221,7 @@
 				522C58AD21BD2E0900CEEA89 /* LaunchScreen.storyboard in Resources */,
 				522C58AA21BD2E0900CEEA89 /* Assets.xcassets in Resources */,
 				522C58A821BD2E0700CEEA89 /* Main.storyboard in Resources */,
+				522C58CA21BD324800CEEA89 /* Leap_years_description.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522C58A521BD2E0700CEEA89 /* ViewController.swift in Sources */,
+				522C58CE21BD338F00CEEA89 /* MainViewController.swift in Sources */,
+				522C58D021BD33BE00CEEA89 /* LeapYearAnalyzer.swift in Sources */,
+				522C58D321BD355D00CEEA89 /* Date+LeapYear.swift in Sources */,
 				522C58A321BD2E0700CEEA89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
