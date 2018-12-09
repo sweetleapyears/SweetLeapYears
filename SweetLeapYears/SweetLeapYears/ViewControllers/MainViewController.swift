@@ -10,13 +10,39 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    //MARK: - Outlets
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBAction func didTapSubmit(_ sender: Any) {
+        let isLeapYear = datePicker.date.isInLeapYear()
+        let pickedYear = Calendar.current.component(.year, from: datePicker.date)
+        let messageToDisplay = isLeapYear ? "\(pickedYear) is a leap year !" : "\(pickedYear) is not a leap year."
+        showAlert(title: "\(pickedYear)", message: messageToDisplay)
+    }
+    
+    @IBAction func didTapMoreInfo(_ sender: Any) {
+        showAlert(title: "Leap years", message: getLeapYearsDescription())
+    }
+    
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let leapYearsDescription = getLeapYearsDescription()
-        print("LYD : \(leapYearsDescription)")
+    }
+    
+    //MARK: - UIAlerts
+    
+    private func showAlert(title: String, message: String) {
         
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
         
     }
 
