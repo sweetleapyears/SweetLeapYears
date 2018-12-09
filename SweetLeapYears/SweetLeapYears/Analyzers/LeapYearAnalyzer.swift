@@ -21,8 +21,6 @@ import Foundation
  C3. All years divisible by 100 but not by 400 are NOT leap years (so, for example, 1700, 1800, and 1900 were NOT leap years, NOR will 2100 be a leap year)
  
  C4. All years divisible by 4 but not by 100 ARE leap years (e.g., 2008, 2012, 2016)
- 
- 
  */
 
 //MARK: - Leap year analyzer
