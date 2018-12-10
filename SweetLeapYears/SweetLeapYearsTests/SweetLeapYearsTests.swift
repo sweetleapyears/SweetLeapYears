@@ -31,13 +31,11 @@ class SweetLeapYearsTests: XCTestCase {
         let datesInNotLeapYears : [Date] = notLeapYears.map { Date(year: $0) }
         
         for date in datesInLeapYears {
-            print("Analyzing \(date)")
             let isLeapYear = date.isInLeapYear()
             XCTAssertTrue(isLeapYear)
         }
         
-        for date in datesInNotLeapYears {
-            print("Analyzing \(date)")
+        	for date in datesInNotLeapYears {
             let isLeapYear = date.isInLeapYear()
             XCTAssertFalse(isLeapYear)
         }
