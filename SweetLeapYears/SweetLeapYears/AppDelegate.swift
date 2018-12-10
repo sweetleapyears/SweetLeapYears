@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SweetLeapYears
 //
-//  Created by Jérémie Vincke on 09/12/2018.
-//  Copyright © 2018 Jérémie Vincke. All rights reserved.
+//  Created by - hidden - on 09/12/2018.
+//  Copyright © 2018 - hidden -. All rights reserved.
 //
 
 import UIKit
